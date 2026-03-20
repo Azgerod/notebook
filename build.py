@@ -19,7 +19,7 @@ from pathlib import Path
 # ── Configuration ────────────────────────────────────────────────────────────
 
 SITE_TITLE = "Cuyler's Notebook"
-SITE_SUBTITLE = "Mathematics · Philosophy · History · Literature"
+SITE_SUBTITLE = "Miscellaneous thoughts"
 CONTENT_DIR = "content"
 STYLE_FILE = "style.css"
 FAVICON_FILE = "favicon.ico"
