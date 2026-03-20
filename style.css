@@ -1,0 +1,248 @@
+/* ── Fonts ──────────────────────────────────────────────────────────────── */
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,400&family=Source+Sans+3:wght@400;600&display=swap');
+
+/* ── Variables ─────────────────────────────────────────────────────────── */
+:root {
+  --bg:         #faf9f6;
+  --fg:         #2c2c2c;
+  --fg-muted:   #7a7a7a;
+  --accent:     #8b4513;
+  --accent-hover:#6b3410;
+  --border:     #e0ddd8;
+  --surface:    #f3f1ec;
+
+  --font-serif: 'Crimson Pro', 'Georgia', serif;
+  --font-sans:  'Source Sans 3', 'Helvetica Neue', sans-serif;
+
+  --max-width:  680px;
+  --spacing:    2rem;
+}
+
+/* ── Reset & Base ──────────────────────────────────────────────────────── */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 17px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: var(--font-sans);
+  color: var(--fg);
+  background: var(--bg);
+  line-height: 1.6;
+  min-height: 100vh;
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+  transition: color 0.15s ease;
+}
+
+a:hover {
+  color: var(--accent-hover);
+}
+
+/* ── Layout ────────────────────────────────────────────────────────────── */
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 4rem var(--spacing) 3rem;
+}
+
+/* ── Site Header (root page) ───────────────────────────────────────────── */
+.site-header {
+  margin-bottom: 3.5rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.site-header h1 {
+  font-family: var(--font-serif);
+  font-weight: 300;
+  font-size: 2.4rem;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+}
+
+.site-header h1 a {
+  color: var(--fg);
+}
+
+.site-header h1 a:hover {
+  color: var(--accent);
+}
+
+.subtitle {
+  font-family: var(--font-serif);
+  font-style: italic;
+  color: var(--fg-muted);
+  font-size: 1.05rem;
+  margin-top: 0.4rem;
+  letter-spacing: 0.02em;
+}
+
+/* ── Page Header (section pages) ───────────────────────────────────────── */
+.page-header {
+  margin-bottom: 2.5rem;
+}
+
+.page-header h1 {
+  font-family: var(--font-serif);
+  font-weight: 400;
+  font-size: 2rem;
+  letter-spacing: -0.01em;
+  margin-top: 0.5rem;
+}
+
+/* ── Breadcrumbs ───────────────────────────────────────────────────────── */
+.breadcrumbs {
+  font-size: 0.85rem;
+  color: var(--fg-muted);
+  margin-bottom: 0.25rem;
+}
+
+.breadcrumbs a {
+  color: var(--fg-muted);
+}
+
+.breadcrumbs a:hover {
+  color: var(--accent);
+}
+
+.breadcrumbs span {
+  color: var(--fg);
+}
+
+/* ── Listings ──────────────────────────────────────────────────────────── */
+.listing {
+  margin-bottom: 2.5rem;
+}
+
+.listing h2 {
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--fg-muted);
+  margin-bottom: 0.75rem;
+}
+
+.dir-list,
+.pdf-list {
+  list-style: none;
+}
+
+.dir-list li,
+.pdf-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: 0.65rem 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.dir-list li:first-child,
+.pdf-list li:first-child {
+  border-top: 1px solid var(--border);
+}
+
+.dir-list li a,
+.pdf-list li a {
+  font-family: var(--font-serif);
+  font-size: 1.15rem;
+  font-weight: 400;
+}
+
+.dir-list li a::before {
+  content: "§ ";
+  color: var(--fg-muted);
+  font-family: var(--font-sans);
+  font-size: 0.9rem;
+}
+
+.pdf-list li a::after {
+  content: " ↗";
+  font-family: var(--font-sans);
+  font-size: 0.8rem;
+  color: var(--fg-muted);
+  transition: color 0.15s ease;
+}
+
+.pdf-list li a:hover::after {
+  color: var(--accent);
+}
+
+.meta {
+  font-size: 0.8rem;
+  color: var(--fg-muted);
+  white-space: nowrap;
+  margin-left: 1rem;
+}
+
+/* ── Section Description ───────────────────────────────────────────────── */
+.section-desc {
+  font-family: var(--font-serif);
+  font-style: italic;
+  color: var(--fg-muted);
+  font-size: 1.05rem;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+
+/* ── Empty State ───────────────────────────────────────────────────────── */
+.empty {
+  font-style: italic;
+  color: var(--fg-muted);
+}
+
+/* ── Footer ────────────────────────────────────────────────────────────── */
+footer {
+  margin-top: 4rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--border);
+}
+
+footer p {
+  font-size: 0.8rem;
+  color: var(--fg-muted);
+  letter-spacing: 0.02em;
+}
+
+/* ── Responsive ────────────────────────────────────────────────────────── */
+@media (max-width: 600px) {
+  html {
+    font-size: 16px;
+  }
+
+  .container {
+    padding: 2.5rem 1.25rem 2rem;
+  }
+
+  .site-header h1 {
+    font-size: 1.8rem;
+  }
+
+  .page-header h1 {
+    font-size: 1.5rem;
+  }
+
+  .dir-list li,
+  .pdf-list li {
+    flex-direction: column;
+    gap: 0.15rem;
+  }
+
+  .meta {
+    margin-left: 0;
+  }
+}
