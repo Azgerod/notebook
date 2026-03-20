@@ -1,1 +1,0 @@
-Notes and textbook drafts on logic, set theory, and linear algebra.

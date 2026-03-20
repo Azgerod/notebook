@@ -1,1 +1,0 @@
-A textbook on propositional logic, predicate logic, and axiomatic set theory.
